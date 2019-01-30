@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>EJERCICIO 1</title>
+</head>
+<body>
+	
+</body>
+<script>
+	window.onload = function(){
+		var date = new Date();
+		var months = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+		var days = ["Domingo","Lunes",'Martes','Miércoles','Jueves','Viernes','Sábado'];
+		document.write("Hoy es " + days[date.getDay()] + "," + date.getDate() + " de " + months[date.getMonth()] + " de " + date.getFullYear() + " y son las " + date.getHours() + ":" + date.getMinutes() + " horas");
+	}
+</script>
+</html>

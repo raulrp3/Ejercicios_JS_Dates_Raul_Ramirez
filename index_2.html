@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>EJERCICIO 2</title>
+</head>
+<body>
+	
+</body>
+<script>
+	window.onload = function(){
+		var now = new Date();
+		var msNow = now.getTime();
+		var name = prompt("Introduce un nombre: ");
+		var surname = prompt("Introduce el primer apellido: ");
+		var lastname = prompt("Introduce el segundo apellido: ");
+		var then = new Date();
+		var msThen = then.getTime();
+		var total = (msThen - msNow) / 1000;
+		document.write("En introducir " + name + " " + surname + " " + lastname + " ha tardado " + Math.floor(total) + " segundos");
+	}
+</script>
+</html>

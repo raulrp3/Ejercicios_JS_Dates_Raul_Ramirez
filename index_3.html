@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>EJERCICIO 3</title>
+</head>
+<body>
+	
+</body>
+<script>
+	window.onload = function(){
+		var months = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+		var days = ["Domingo","Lunes",'Martes','Miércoles','Jueves','Viernes','Sábado'];
+		var year = parseInt(prompt("Introduce un año: "));
+		var month = parseInt(prompt("Introduce un mes: ")) - 1;
+		var date = new Date(year,month);
+		var strResult = months[month] + " - " + year + "</br></br>";
+		while(date.getMonth() == month){
+			strResult += date.getDate() + "(" + days[date.getDay()] + ")</br>";
+			date.setDate(date.getDate() + 1);
+		}
+		document.write(strResult);
+	}
+</script>
+</html>
