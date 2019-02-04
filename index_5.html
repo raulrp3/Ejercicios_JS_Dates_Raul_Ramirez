@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>EJERCICIO 5</title>
+</head>
+<body>
+	<p id="time"></p>
+</body>
+<script>
+	window.onload = function(){
+		var time = document.getElementById("time");
+		time.innerHTML = update();
+		setInterval(function(){
+			time.innerHTML = update();
+		},1000);
+	}
+	function update(){
+		var date = new Date();
+		var strHours = formatDate(date.getHours()) + ":" + formatDate(date.getMinutes()) + ":" + formatDate(date.getSeconds());
+		return strHours;
+	}
+	function formatDate(number){
+		if (number < 10){
+			number = 0 + number.toString();
+		}
+		return number;
+	}
+</script>
+</html>
